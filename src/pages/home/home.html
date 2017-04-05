@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Love Calculator</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Name 1</ion-label><button item-right ion-button (click)="pickContact1()">
+      <ion-icon ios="ios-contact" md="md-contact"></ion-icon></button>
+      <ion-input type="text" [(ngModel)]="name1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Name 2</ion-label><button item-right ion-button (click)="pickContact2()">
+      <ion-icon ios="ios-contact" md="md-contact"></ion-icon></button>
+      <ion-input type="text" [(ngModel)]="name2"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-card>
+
+    <ion-list>
+
+      <ion-item>
+        <p text-center>{{ name1 }} <ion-icon name="heart"></ion-icon> {{ name2 }}</p>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button (click)="getscore()">Calculate Love</button>
+        <h1 text-center>{{ score }}%</h1>
+        
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>
